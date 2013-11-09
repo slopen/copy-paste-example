@@ -1,6 +1,5 @@
 define ([
 
-    // application components
     "jquery",
     "underscore",
     "backbone"
