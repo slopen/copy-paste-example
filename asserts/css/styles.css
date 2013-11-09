@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  background: url('../images/background.png');
+}
+#main {
+  font-family: Helvetica, Arial;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222;
+  margin: 10px;
+}
+#main:before,
+#main:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#main:after {
+  clear: both;
+}
+#main header {
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: -1px 2px 5px #cccccc;
+  background: #FFF;
+}
+#main header h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+#main .text-panel,
+#main .table-panel {
+  min-height: 500px;
+  box-shadow: -1px 2px 5px #cccccc;
+}
+#main .text-panel {
+  background: #FFF;
+  width: 60%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+#main .text-panel p {
+  margin-bottom: 24px;
+}
+#main .text-panel p:before {
+  content: "\00b6";
+  margin-right: 10px;
+}
+#main .table-panel {
+  background: #FFF;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#main .table-panel table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#main .table-panel table tr > td {
+  border: 1px solid #CCC;
+  padding: 10px;
+  height: 24px;
+}
+#main .table-panel table tr > td:hover {
+  background: #EEE;
+}
+#main #context-menu,
+#main #selection-text {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  background: #FFF;
+  box-shadow: -1px 2px 5px #cccccc;
+}
+#main #context-menu.active,
+#main #selection-text.active {
+  display: block;
+}
+#main #context-menu ul {
+  min-width: 100px;
+  list-style: none;
+}
+#main #context-menu ul > li {
+  padding: 2px;
+}
+#main #context-menu ul > li a {
+  text-decoration: none;
+  color: #111;
+  display: block;
+  padding: 10px;
+  line-height: 14px;
+}
+#main #context-menu ul > li a:hover {
+  background: #EEE;
+}
+#main #selection-text {
+  pointer-events: none;
+  padding: 10px;
+  width: 300px;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-transition: left .3s ease, left .3s ease;
+  -moz-transition: left .3s ease, left .3s ease;
+  -o-transition: left .3s ease, left .3s ease;
+  -ms-transition: left .3s ease, left .3s ease;
+  transition: left .3s ease, left .3s ease;
+}

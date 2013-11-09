@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>copy and paste example</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="asserts/css/styles.css" type="text/css" media="screen" charset="utf-8">
+
+    <!-- scripts -->
+    <script data-main="asserts/js/config.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"></script>
+
+    <script type="text/html" id="item-template">
+   		<td data-model="<%= data.id %>"><%= data.content %></td>
+    </script>
+
+</head>
+<body>
+
+	<div id="main">
+
+		<header>
+			<h1>Copy/paste example</h1>
+			<p>Select text in the left panel -> right mouse click -> "copy text" action -> click in a cell in the right panel</p>
+			<p>Esc for undo last paste</p>
+		</header>
+
+		<!-- panels -->
+		<div class="text-panel">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+		</div>
+		<div class="table-panel">
+			<table>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<!-- ui elements -->
+		<div class="ui-elemens">
+
+			<div id="context-menu">
+				<ul>
+					<li><a href="#">copy text</a></li>
+				</ul>
+			</div>
+
+			<div id="selection-text"></div>
+		</div>
+	</div>
+
+</body>
+</html>
