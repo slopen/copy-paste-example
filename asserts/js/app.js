@@ -7,7 +7,7 @@ define ([
 
 ], function ($, _, Backbone) {
 
-	return function ($element){
+  return function ($element){
 
     // model for item in table
     var itemModel = Backbone.Model;
@@ -121,6 +121,7 @@ define ([
           var selection = this.selection = this.getSelection(),
               $contextMenu = $('#context-menu').removeClass('active');
 
+          // selection text tooltip
           $('#selection-text')
             .css({
                 left: e.pageX,
@@ -129,15 +130,18 @@ define ([
             .addClass('active')
             .text(selection.text);
 
+          // watch for mouse position
           $(document).on('mousemove', _.bind(function(){
             this.dragSelection.apply(this, arguments);
           }, this));
+
+          return false;
         },
 
         // paste into cell by click
         "click .table-panel td": function(e){
 
-          if (this.selection){
+          if (this.selection) {
             var $element = $(e.currentTarget);
 
             $element.trigger($.Event('text:paste', {
